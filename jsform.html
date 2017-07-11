@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Javascript Form Experiments</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+    <SCRIPT type="text/javascript">
+        function calculate() {
+            var USERINPUT1 = document.TESTING.INPUT1.value;
+            var CALC1 = USERINPUT1 / 20;
+            var CALC2 = CALC1 * .585;
+            var CALC3 = CALC2 * .30;
+            document.TESTING.OUTPUT1.value = CALC3;
+        }
+    </SCRIPT>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 well">
+                <form name="TESTING">
+                    <input type="number" name="INPUT1" id="input" onchange="calculate();" />
+                    <input type=" number " name="OUTPUT1" id="output">
+                </form>
+            </div>
+            <div class="col-md-6 jumbotron ">
+                <h3>This is jumbotron</h3>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script>
+        (function($) {
+            console.log('hiii');
+            $('#input').on('keyup', function() {
+                console.log('right clicked...');
+            })
+        }(jQuery))
+    </script>
+
+</body>
+
+</html>
